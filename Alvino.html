@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Untuk Dhebita ❤️</title>
+  <meta name="description" content="Ucapan cinta manis untuk Dhebita dalam sebuah halaman web." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg1: #ff6aa2;
+      --bg2: #7b5cff;
+      --bg3: #ffb86b;
+      --card: rgba(255,255,255,.18);
+      --glass: rgba(255,255,255,.65);
+      --text: #1b1333;
+      --soft: #ffffff;
+      --accent: #ff3b7e;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--text);
+      overflow-x: hidden;
+      background: linear-gradient(-45deg, var(--bg1), var(--bg2), var(--bg3), #ff9ad5);
+      background-size: 400% 400%;
+      animation: bgMove 20s ease infinite;
+    }
+    @keyframes bgMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Floating hearts */
+    .hearts { position: fixed; inset: 0; pointer-events: none; overflow: hidden; }
+    .heart {
+      position: absolute;
+      width: 14px; height: 14px;
+      background: var(--soft);
+      transform: rotate(45deg);
+      border-radius: 2px;
+      filter: drop-shadow(0 4px 8px rgba(0,0,0,.15));
+      opacity: .85;
+      animation: floatUp linear forwards;
+    }
+    .heart::before, .heart::after {
+      content: ""; position: absolute; width: 14px; height: 14px; background: inherit; border-radius: 50%;
+    }
+    .heart::before { left: -7px; top: 0; }
+    .heart::after { top: -7px; left: 0; }
+    @keyframes floatUp {
+      to { transform: translateY(-120vh) rotate(45deg); opacity: 0; }
+    }
+
+    .wrap { min-height: 100%; display: grid; place-items: center; padding: 32px 16px 64px; }
+
+    .card {
+      width: min(900px, 94vw);
+      background: linear-gradient(180deg, var(--glass), rgba(255,255,255,.85));
+      border: 1px solid rgba(255,255,255,.35);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 28px;
+      padding: clamp(18px, 4vw, 40px);
+      box-shadow: 0 20px 60px rgba(0,0,0,.18);
+    }
+
+    .title {
+      text-align: center;
+      font-family: 'Great Vibes', cursive;
+      font-size: clamp(40px, 9vw, 84px);
+      line-height: 1.1;
+      margin: 6px 0 12px;
+      color: #c2175b;
+      text-shadow: 0 6px 18px rgba(194,23,91,.25);
+    }
+
+    .subtitle { text-align: center; font-size: clamp(14px, 2.6vw, 18px); opacity: .85; }
+
+    .typewriter {
+      margin: 24px auto 10px;
+      font-size: clamp(18px, 3.8vw, 28px);
+      font-weight: 600;
+      text-align: center;
+      max-width: 32ch;
+      min-height: 2.6em;
+    }
+
+    .message {
+      margin: 10px auto 0;
+      font-size: clamp(14px, 2.9vw, 18px);
+      line-height: 1.8;
+      text-align: center;
+      max-width: 62ch;
+    }
+
+    .row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 26px; }
+    .chip {
+      background: rgba(255,255,255,.9);
+      border: 1px solid rgba(0,0,0,.05);
+      border-radius: 16px;
+      padding: 12px 14px;
+      display: flex; align-items: center; gap: 10px;
+      box-shadow: 0 6px 18px rgba(0,0,0,.08);
+    }
+    .chip i { font-style: normal; font-size: 18px; }
+
+    .controls { display: flex; justify-content: center; gap: 12px; margin-top: 26px; flex-wrap: wrap; }
+    button {
+      appearance: none; border: 0; cursor: pointer; font-weight: 700;
+      padding: 12px 18px; border-radius: 999px; font-size: 16px;
+      transition: transform .12s ease, box-shadow .2s ease;
+      box-shadow: 0 10px 20px rgba(0,0,0,.12);
+    }
+    .btn-primary { background: var(--accent); color: white; }
+    .btn-ghost { background: white; color: var(--text); }
+    button:active { transform: translateY(2px); box-shadow: 0 6px 12px rgba(0,0,0,.18); }
+
+    .footer { text-align: center; margin-top: 20px; font-size: 12px; opacity: .7; }
+
+    dialog {
+      border: none; border-radius: 18px; padding: 0; overflow: hidden;
+      box-shadow: 0 24px 60px rgba(0,0,0,.35);
+      width: min(560px, 92vw);
+    }
+    .modal { background: white; padding: 22px; }
+    .modal h3 { margin: 0 0 6px; }
+    .modal p { margin: 8px 0; line-height: 1.7; }
+    .modal .actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 10px; }
+
+    /* Heart cursor sparkle */
+    .cursor-heart { position: fixed; width: 10px; height: 10px; pointer-events: none; transform: translate(-50%, -50%) rotate(45deg); }
+    .cursor-heart::before, .cursor-heart::after { content: ""; position: absolute; width: 10px; height: 10px; background: currentColor; border-radius: 50%; }
+    .cursor-heart::before { left: -5px; }
+    .cursor-heart::after { top: -5px; }
+  </style>
+</head>
+<body>
+  <div class="hearts" aria-hidden="true" id="hearts"></div>
+
+  <main class="wrap">
+    <section class="card" role="region" aria-label="Ucapan untuk Dhebita">
+      <h1 class="title">Untuk Dhebita</h1>
+      <p class="subtitle">Sebuah halaman kecil dari hatiku yang selalu memelukmu.</p>
+
+      <p id="type" class="typewriter" aria-live="polite"></p>
+
+      <p class="message">
+        Terima kasih sudah hadir dan mengajarkanku arti rumah. Di setiap detik, ada kamu
+        yang selalu ingin kujaga—dari hal kecil yang lucu sampai mimpi-mimpi yang ingin kita wujudkan
+        berdua. Aku sayang kamu, Dhebita. Hari ini, besok, dan seterusnya. ❤️
+      </p>
+
+      <div class="row" aria-label="Alasan aku mencintaimu">
+        <div class="chip"><i>💖</i> Senyummu menenangkan, seperti lagu favoritku yang tak pernah bosan kudengar.</div>
+        <div class="chip"><i>🌷</i> Caramu mendengarkan membuatku ingin bercerita tanpa henti.</div>
+        <div class="chip"><i>🌙</i> Kamu rumah dalam lelahku, dan mimpi dalam malamku.</div>
+        <div class="chip"><i>✨</i> Kita adalah tim: saling dukung, saling tumbuh, saling bahagia.</div>
+      </div>
+
+      <div class="controls">
+        <button class="btn-primary" id="btnSurprise">Buka Pesan Spesial</button>
+        <button class="btn-ghost" id="btnShare">Salin Tautan Halaman</button>
+      </div>
+
+      <p class="footer" id="stamp"></p>
+    </section>
+  </main>
+
+  <dialog id="modal">
+    <div class="modal">
+      <h3>Untuk kamu, Dhebita 💌</h3>
+      <p>
+        Jika ada 100 cara untuk mencintaimu, aku akan memilih semuanya. Jika hanya ada satu, aku akan
+        memilih yang itu setiap hari. Terima kasih sudah menjadi rumah paling hangat.
+      </p>
+      <div class="actions">
+        <button class="btn-ghost" id="btnClose">Tutup</button>
+        <button class="btn-primary" id="btnHeartRain">Hujani dengan Love</button>
+      </div>
+    </div>
+  </dialog>
+
+  <script>
+    // Typewriter text
+    const lines = [
+      'Hai, Dhebita…',
+      'Ada sesuatu yang ingin aku katakan:',
+      'Aku. Sayang. Kamu. Selalu.'
+    ];
+    const elType = document.getElementById('type');
+    let li = 0, ci = 0, deleting = false;
+
+    function typeLoop(){
+      const current = lines[li];
+      if(!deleting){
+        elType.textContent = current.slice(0, ++ci);
+        if(ci === current.length){
+          deleting = true;
+          setTimeout(typeLoop, 1400);
+          return;
+        }
+      } else {
+        elType.textContent = current.slice(0, --ci);
+        if(ci === 0){
+          deleting = false; li = (li + 1) % lines.length;
+        }
+      }
+      setTimeout(typeLoop, deleting ? 40 : 70);
+    }
+    typeLoop();
+
+    // Date stamp
+    const stamp = document.getElementById('stamp');
+    const now = new Date();
+    const opts = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    stamp.textContent = `Dibuat dengan cinta • ${now.toLocaleDateString('id-ID', opts)}`;
+
+    // Floating hearts generator
+    const heartsWrap = document.getElementById('hearts');
+    const colors = ['#ffffff', '#ffd1e6', '#ffe7f1', '#fff6fb'];
+    function spawnHeart(x = Math.random() * window.innerWidth, delay = 0){
+      const h = document.createElement('span');
+      h.className = 'heart';
+      const size = 10 + Math.random()*22;
+      const dur = 6 + Math.random()*6;
+      h.style.left = `${x}px`;
+      h.style.bottom = '-24px';
+      h.style.width = h.style.height = size + 'px';
+      h.style.animationDuration = dur + 's';
+      h.style.animationDelay = delay + 's';
+      h.style.background = h.style.color = colors[Math.floor(Math.random()*colors.length)];
+      h.style.opacity = 0.6 + Math.random()*0.4;
+      heartsWrap.appendChild(h);
+      setTimeout(() => h.remove(), (dur + delay) * 1000);
+    }
+    // ambient hearts
+    for(let i=0;i<24;i++) spawnHeart(Math.random()*window.innerWidth, Math.random()*6);
+    setInterval(() => spawnHeart(), 900);
+
+    // Modal
+    const modal = document.getElementById('modal');
+    const btnSurprise = document.getElementById('btnSurprise');
+    const btnClose = document.getElementById('btnClose');
+    const btnHeartRain = document.getElementById('btnHeartRain');
+
+    btnSurprise.addEventListener('click', () => modal.showModal());
+    btnClose.addEventListener('click', () => modal.close());
+    btnHeartRain.addEventListener('click', () => {
+      // burst of hearts
+      const burst = 80;
+      for(let i=0;i<burst;i++){
+        setTimeout(() => spawnHeart(Math.random()*window.innerWidth), i*20);
+      }
+    });
+
+    // Share link
+    const btnShare = document.getElementById('btnShare');
+    btnShare.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(location.href);
+        btnShare.textContent = 'Tautan Disalin ✅';
+        setTimeout(()=> btnShare.textContent='Salin Tautan Halaman', 2000);
+      } catch (e){
+        alert('Tidak bisa menyalin otomatis. Kamu bisa salin alamat di bilah URL.');
+      }
+    });
+
+    // Cute heart cursor on click
+    window.addEventListener('click', (e) => {
+      const c = document.createElement('span');
+      c.className = 'cursor-heart';
+      c.style.left = e.clientX + 'px';
+      c.style.top = e.clientY + 'px';
+      c.style.color = ['#ff3b7e', '#c2175b', '#ff6aa2', '#ff9ad5'][Math.floor(Math.random()*4)];
+      document.body.appendChild(c);
+      c.animate([
+        { transform: `translate(-50%, -50%) rotate(45deg) scale(0.6)`, opacity: .9 },
+        { transform: `translate(-50%, -90%) rotate(45deg) scale(1.3)`, opacity: 0 }
+      ], { duration: 700, easing: 'ease-out' }).addEventListener('finish', ()=> c.remove());
+    }, { passive: true });
+  </script>
+</body>
+</html>
